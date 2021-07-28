@@ -1,0 +1,27 @@
+{
+  "name": "@indigo-lab/mapbox-gl-download",
+  "version": "0.0.1",
+  "description": "A mapbox-gl-js plugin to add a control to download features as GeoJSON",
+  "main": "mapbox-gl-download.js",
+  "scripts": {
+    "build": "rollup main.js --file docs/mapbox-gl-download.js --format iife -p @rollup/plugin-node-resolve -p @rollup/plugin-commonjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indigo-lab/mapbox-gl-download.git"
+  },
+  "author": "indigo-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indigo-lab/mapbox-gl-download/issues"
+  },
+  "homepage": "https://github.com/indigo-lab/mapbox-gl-download#readme",
+  "dependencies": {
+    "file-saver": "^2.0.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.2",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.54.0"
+  }
+}

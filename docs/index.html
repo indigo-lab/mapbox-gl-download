@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>mapbox-gl-download</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="mapbox-gl-download.css" />
+  <script src="https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js"></script>
+  <script src="mapbox-gl-download.js"></script>
+</head>
+
+<body>
+  <div id="map" style="position:absolute;top:0;left:0;bottom:0;right:0;"></div>
+  <script>
+    const map = new maplibregl.Map({
+      "container": "map",
+      "center": [139.68786, 35.68355],
+      "zoom": 14.65,
+      "pitch": 60,
+      "bearing": 22,
+      "hash": true,
+      "style": "https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/std.json"
+    });
+    map.addControl(new maplibregl.DownloadControl({
+      onEachFeature: function(feature) {
+        return feature.geometry.type === "Polygon" ? feature : null;
+      }
+    }), 'top-left');
+  </script>
+</body>
+
+</html>

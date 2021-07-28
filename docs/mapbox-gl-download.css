@@ -1,0 +1,15 @@
+button.mapbox-ctrl-download {
+  width: 29px;
+  height: 29px;
+  display: block;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button.mapbox-ctrl-download .mapboxgl-ctrl-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='29' height='29' viewBox='0 0 29 29' xmlns='http://www.w3.org/2000/svg' fill='%23333'%3E %3Cpath d='M5,23v-7.5h2.5v5h14,v-5h2.5v7.5zM14.5,18.5l-5,-5h3v-7.5h4v7.5h3z'/%3E %3C/svg%3E");
+}
